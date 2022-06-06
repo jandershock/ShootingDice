@@ -14,14 +14,37 @@ namespace ShootingDice
             Player player2 = new Player();
             player2.Name = "Sue";
 
-            player2.Play(player1);
-
-            Console.WriteLine("-------------------");
-
             Player player3 = new Player();
             player3.Name = "Wilma";
 
-            player3.Play(player2);
+            CreativeSmackTalkingPlayer playerSmackTalker = new CreativeSmackTalkingPlayer();
+            playerSmackTalker.Name = "Obi-Wan";
+
+            OneHigherPlayer oneUpPlayer = new OneHigherPlayer();
+            oneUpPlayer.Name = "John";
+
+            HumanPlayer actualPlayer = new HumanPlayer();
+            actualPlayer.Name = "Player";
+
+            SmackTalkingPlayer smackTalkPlayer = new SmackTalkingPlayer();
+            smackTalkPlayer.Name = "Bill";
+
+            SoreLoserPlayer soreLoserPlayer = new SoreLoserPlayer();
+            soreLoserPlayer.Name = "Whiner Boy";
+
+            UpperHalfPlayer upperHalfPlayer = new UpperHalfPlayer();
+            upperHalfPlayer.Name = "Upper Ulysses";
+
+            SoreLoserUpperHalfPlayer soreUpperHalfPlayer = new SoreLoserUpperHalfPlayer();
+            soreUpperHalfPlayer.Name = "Sore Upper Sheamus";
+
+
+            soreLoserPlayer.Play(actualPlayer);
+
+
+            Console.WriteLine("-------------------");
+
+            upperHalfPlayer.Play(player1);
 
             Console.WriteLine("-------------------");
 
@@ -33,7 +56,7 @@ namespace ShootingDice
             Console.WriteLine("-------------------");
 
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large
+                player1, player2, player3, large, playerSmackTalker, oneUpPlayer, actualPlayer, smackTalkPlayer, soreLoserPlayer, soreUpperHalfPlayer
             };
 
             PlayMany(players);
